@@ -4,8 +4,8 @@ import Menu from "./Menu";
 
 const Home = (props) => {
   return (
-    <div className="home">
-      <div className="home-img">
+    <div className="container">
+      <div className="home-img box">
         <h1>Home</h1>
       </div>
       <Menu />

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
-    <div className="home-menu">
+    <div className="home-menu box">
       <Link id="gamemodes-btn" className="menu-box" to="/gamemodes">
         <div>GameModes</div>
       </Link>

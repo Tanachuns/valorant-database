@@ -11,16 +11,6 @@ import Maps from "./components/Maps/Maps";
 import React from "react";
 
 function App() {
-  React.useEffect(() => {
-    axios
-      .get("https://valorant-api.com/v1/agents")
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  }, []);
   return (
     <div className="App">
       <header>

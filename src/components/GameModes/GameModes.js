@@ -2,7 +2,7 @@ import React from "react";
 
 const GameModes = () => {
   return (
-    <div className="home">
+    <div className="container">
       <div>gamemode 1</div>
     </div>
   );

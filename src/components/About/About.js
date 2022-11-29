@@ -1,11 +1,10 @@
 import React from "react";
-
-const Maps = () => {
+const About = () => {
   return (
     <div className="home">
-      <h1>Maps</h1>
+      <h1>About</h1>;
     </div>
   );
 };
 
-export default Maps;
+export default About;

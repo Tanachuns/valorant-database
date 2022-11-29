@@ -1,9 +1,14 @@
 import React from "react";
+import "./Home.css";
+import Menu from "./Menu";
 
-const Home = () => {
+const Home = (props) => {
   return (
-    <div className="Home">
-      <h1>Home</h1>
+    <div className="home">
+      <div className="home-img">
+        <h1>Home</h1>
+      </div>
+      <Menu />
     </div>
   );
 };

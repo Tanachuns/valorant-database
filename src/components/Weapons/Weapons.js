@@ -1,7 +1,11 @@
 import React from "react";
 
 const Weapons = () => {
-  return <h1>Weapons</h1>;
+  return (
+    <div className="home">
+      <h1>Weapons</h1>
+    </div>
+  );
 };
 
 export default Weapons;

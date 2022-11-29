@@ -25,7 +25,14 @@ function App() {
     <div className="App">
       <header>
         <Link to="/home">
-          <h1>Valorant</h1>
+          <h1>
+            <img
+              src="https://1000logos.net/wp-content/uploads/2022/09/Valorant-Emblem.png"
+              alt="Home"
+              width={50}
+            />
+            Valorant
+          </h1>
         </Link>
       </header>
       <main>
@@ -39,11 +46,13 @@ function App() {
         </Routes>
       </main>
       <footer>
-        <Link to="/home">Home</Link>
-        <Link to="/gamemodes">GameModes</Link>
-        <Link to="/agent">Agents</Link>
-        <Link to="/weapons">Weapons</Link>
-        <Link to="/maps">Maps</Link>
+        <div>
+          <Link to="/home">Home</Link>
+          <Link to="/gamemodes">GameModes</Link>
+          <Link to="/agent">Agents</Link>
+          <Link to="/weapons">Weapons</Link>
+          <Link to="/maps">Maps</Link>
+        </div>
       </footer>
     </div>
   );

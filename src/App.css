@@ -1,10 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
-*{
-  font-family: 'Anton',sans-serif;
+.App{
+  height: 100vh;
 }
 
-a{
+header{
+  color: #FFF;
+  background-color: #0f1923;
+  height: 10%;
+  display: flex;
+    text-align: center;
+    align-items: center;
+}
+header *{
+  text-decoration: none;
+  margin: 0 1em;
+  color: #FFF;
+}
+header *:hover {
+  color: #FFF;
+  color: #ff4655;
+}
+
+
+main{
+  height: 80%;
+}
+
+footer{
+  display: flex;
+  text-align: center;
+  align-items: center;  
+  color: #FFF;
+  background-color: #0f1923;
+  justify-content: space-around;
+  height: 10%;
+}
+footer>a {
   text-decoration: none;
   color: #ff4655;
+}
+
+footer>a:hover {
+  color: #FFF;
 }

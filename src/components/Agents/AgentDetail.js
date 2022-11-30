@@ -9,11 +9,7 @@ const AgentDetail = (props) => {
       <div className="agents-show">
         <div className="agents-detail box">
           <h2>{props.agent.displayName}</h2>
-          <img
-            src={props.agent.displayIcon}
-            alt={props.agent.displayName}
-            height={100}
-          />
+
           <p>{props.agent.description}</p>
           <h3>Abilities</h3>
           <div className="agents-detail-skill">{abilities}</div>

@@ -1,11 +1,21 @@
 import React from "react";
+import Loading from "../Loading/Loading";
 
 const Weapons = () => {
-  return (
-    <div className="container">
-      <h1>Weapons</h1>
-    </div>
-  );
+  const [isLoading, setIsLoading] = React.useState(true);
+  React.useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
+  }, []);
+  if (isLoading) {
+    return <Loading />;
+  } else {
+    return (
+      <div className="container">
+        <div>gamemode 1</div>
+      </div>
+    );
+  }
 };
-
 export default Weapons;

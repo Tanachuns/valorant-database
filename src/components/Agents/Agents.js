@@ -3,10 +3,12 @@ import axios from "axios";
 import "./Agent.css";
 import AgentDetail from "./AgentDetail";
 import AgentButton from "./AgentButton";
+import Loading from "../Loading/Loading";
 
-const Agents = () => {
+const Agents = (props) => {
   const [agent, setAgent] = React.useState({});
   const [agentList, setAgentList] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
     axios
@@ -16,22 +18,31 @@ const Agents = () => {
         setAgent(response.data.data[0]);
         setAgentList(response.data.data);
       })
+      .then(() => {
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 3000);
+      })
       .catch((error) => {
         console.log(error);
       });
   }, []);
-
+  console.log(isLoading);
   const agents = agentList.map((item, index) => {
     return (
       <AgentButton index={index} key={index} agent={item} setAgent={setAgent} />
     );
   });
-  return (
-    <div className="container agents">
-      <AgentDetail agent={agent} />
-      <div className="agents-list box">{agents}</div>
-    </div>
-  );
+  if (isLoading) {
+    return <Loading />;
+  } else {
+    return (
+      <div className="container agents">
+        <AgentDetail agent={agent} />
+        <div className="agents-list box">{agents}</div>
+      </div>
+    );
+  }
 };
 
 export default Agents;

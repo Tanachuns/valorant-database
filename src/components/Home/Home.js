@@ -1,16 +1,28 @@
 import React from "react";
 import "./Home.css";
 import Menu from "./Menu";
+import Loading from "../Loading/Loading";
 
 const Home = (props) => {
-  return (
-    <div className="container home">
-      <div className="home-img box">
-        <h1>Home</h1>
+  const [isLoading, setIsLoading] = React.useState(true);
+  React.useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  } else {
+    return (
+      <div className="container home">
+        <div className="home-img box">
+          <h1>Home</h1>
+        </div>
+        <Menu />
       </div>
-      <Menu />
-    </div>
-  );
+    );
+  }
 };
 
 export default Home;

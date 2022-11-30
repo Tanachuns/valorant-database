@@ -27,13 +27,13 @@ main{
   
 }
 
-.container{
-  display: flex;
-  height: 100%;
-  width: 100%;
-  background: url("https://pbs.twimg.com/media/EZdgO14WoAINDOG.jpg:large");
-  background-size: cover;
-}
+.container {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      background: url("https://pbs.twimg.com/media/EZdgO14WoAINDOG.jpg:large");
+      background-size: cover;
+    }
 
 .box{
   margin: 1em;
@@ -65,3 +65,9 @@ footer>div>a:hover {
   color: #FFF;
 }
 
+@media (max-width: 480px) {
+  .container {
+    display: flexbox;
+    flex-direction: column;
+  }
+}

@@ -27,3 +27,14 @@
     grid-row: 3 / span 1;
     grid-column: 1 / span 2;
 }
+
+@media (max-width: 900px) {
+    .home-menu{
+        display: none;
+    }
+    .home-img {
+        width: 82%;
+    }
+
+    
+}

@@ -27,6 +27,8 @@
     text-align: center;
 }
 
+
+
 .tooltip .top {
     min-width: 200px;
     top: -20px;
@@ -39,7 +41,7 @@
     font-size: 13px;
     border-radius: 8px;
     position: absolute;
-    z-index: 99999999;
+    z-index: 999999999;
     box-sizing: border-box;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
     display: none;
@@ -75,5 +77,47 @@
 .weapon{
     display: flex;
     overflow: scroll;
+}
+.tooltip {
+    display: inline-block;
+    position: relative;
+    border-bottom: 1px dotted #666;
+    text-align: center;
+}
+
+.tooltip .top {
+    min-width: 200px;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 10px 20px;
+    color: #FFFFFF;
+    background-color: #0f1923;
+    font-weight: normal;
+    font-size: 13px;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 99999999;
+    box-sizing: border-box;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.tooltip:hover .top {
+    display: block;
+}
+
+.tooltip .top i {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -12px;
+    width: 24px;
+    height: 12px;
+    overflow: hidden;
+}
+
+.tooltip .top i::after {
+    display: none;
 }
 }

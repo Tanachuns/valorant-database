@@ -1,0 +1,12 @@
+.weapon-box{
+    background-color: rgba(236, 236, 236, .1);
+    margin: 1em;
+    padding: .3em;
+    width: 20%;
+    height: 6%;
+    text-align: center;
+}
+
+.weapon-box>img {
+   width: 50%;
+}

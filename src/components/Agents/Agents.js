@@ -27,7 +27,6 @@ const Agents = (props) => {
         console.log(error);
       });
   }, []);
-  console.log(isLoading);
   const agents = agentList.map((item, index) => {
     return (
       <AgentButton index={index} key={index} agent={item} setAgent={setAgent} />

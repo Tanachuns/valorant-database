@@ -1,18 +1,15 @@
 import React from "react";
-import WeaponBox from "./WeaponBox";
 
 const WeaponList = (props) => {
-  props.weaponList.pop();
-  const sideArm = props.weaponList
-    .filter((item) => {
-      console.log(item.shopData.categoryText);
-      return item.shopData.categoryText === "Sidearms";
-    })
-    .map((item) => {
-      return <WeaponBox img={item.displayIcon} />;
-    });
-
-  return <div className="weapon-sidearm box">{sideArm}</div>;
+  return (
+    <div
+      className="weapon-list box"
+      style={{ gridRow: props.row, gridColumn: props.col }}
+    >
+      <p>{props.weaponType}</p>
+      {props.weaponList}
+    </div>
+  );
 };
 
 export default WeaponList;

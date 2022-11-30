@@ -30,7 +30,7 @@
 
     display: grid;
     grid-template-columns: repeat(9,50px);
-    grid-template-rows: 22% 22% 22%;
+    grid-template-rows: 1fr;
     gap: 1em;
     max-width: fit-content;
     justify-content: center;
@@ -48,7 +48,7 @@
     height: 100%;
     object-fit: none;
     object-position: center 10%;
-        }
+    }
     
 .agents-list {
     grid-template-columns: repeat(3, 50px);

@@ -1,6 +1,5 @@
 import "./App.css";
 import { Route, Routes, Link, Navigate } from "react-router-dom";
-import axios from "axios";
 import "./App.css";
 
 import Home from "./components/Home/Home";
@@ -17,7 +16,7 @@ function App() {
         <Link to="/home">
           <h1>
             <img
-              src="https://1000logos.net/wp-content/uploads/2022/09/Valorant-Emblem.png"
+              src="https://1000logos.net/wp-content/uploads/2022/09/Valorant-Emblem.png" //need local logo
               alt="Home"
               width={50}
             />

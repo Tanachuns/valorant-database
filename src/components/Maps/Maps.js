@@ -2,7 +2,7 @@ import React from "react";
 
 const Maps = () => {
   return (
-    <div className="home">
+    <div className="container">
       <h1>Maps</h1>
     </div>
   );

@@ -26,7 +26,6 @@ const Agents = () => {
       <AgentButton index={index} key={index} agent={item} setAgent={setAgent} />
     );
   });
-  console.log(agent);
   return (
     <div className="container agents">
       <AgentDetail agent={agent} />

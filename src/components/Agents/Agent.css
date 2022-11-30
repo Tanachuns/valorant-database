@@ -6,7 +6,7 @@
 .agents-show{
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 
 .agents-show>img{
@@ -33,7 +33,7 @@
 
 
     display: grid;
-    grid-template-columns: repeat(7,50px);
+    grid-template-columns: repeat(9,50px);
     grid-template-rows: 22% 22% 22%;
     gap: 1em;
     max-width: fit-content;

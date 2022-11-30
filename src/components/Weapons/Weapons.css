@@ -71,7 +71,7 @@
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 1230px) {
+@media (max-width: 1024px) {
 .weapon{
     display: flex;
     overflow: scroll;

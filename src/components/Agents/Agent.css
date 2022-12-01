@@ -51,7 +51,7 @@
     }
     
 .agents-list {
-    grid-template-columns: repeat(3, 50px);
+    grid-template-columns: repeat(5, 50px);
     top: 65%;
     max-height: 20%;
     margin: auto;

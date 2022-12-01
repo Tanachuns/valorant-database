@@ -28,7 +28,7 @@ const Maps = () => {
 
   const maps = mapList.map((item, index) => {
     return (
-      <div>
+      <div key={index}>
         <img src={item.splash} alt={item.displayName} />
         <p className="legend">{item.displayName}</p>
       </div>
@@ -42,6 +42,7 @@ const Maps = () => {
         <div className="maps box">
           <Carousel>{maps}</Carousel>
         </div>
+        <div className="maps-mobile box ">{maps}</div>
       </div>
     );
   }

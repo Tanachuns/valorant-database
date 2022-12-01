@@ -12,3 +12,22 @@
     margin: auto;
 }
 
+.maps-mobile{
+    text-align: center;
+    overflow: scroll;
+    display: none;
+}
+
+.maps-mobile img {
+    width: 70%;
+}
+
+@media (max-width: 870px) {
+    .maps {
+        display: none;
+    }
+        .maps-mobile {
+            display: block;
+        }
+
+}

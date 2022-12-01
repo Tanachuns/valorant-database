@@ -68,7 +68,7 @@ footer>div>a:hover {
   color: #FFF;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .container {
     display: flexbox;
     flex-direction: column;

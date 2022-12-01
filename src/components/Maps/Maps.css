@@ -1,0 +1,14 @@
+.maps img{
+    width: 50%;
+}
+.slider-wrapper{
+    max-width:  50%;
+}
+
+.maps{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+

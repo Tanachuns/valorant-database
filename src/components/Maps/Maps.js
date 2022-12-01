@@ -1,19 +1,47 @@
 import React from "react";
+import axios from "axios";
 import Loading from "../Loading/Loading";
+import "./Maps.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 const Maps = () => {
   const [isLoading, setIsLoading] = React.useState(true);
+  const [mapList, setMapList] = React.useState([]);
+
   React.useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2500);
+    axios
+      .get("https://valorant-api.com/v1/maps")
+      .then((response) => {
+        console.log(response.data.data);
+        setMapList(response.data.data);
+      })
+      .then(() => {
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 2500);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
+
+  const maps = mapList.map((item, index) => {
+    return (
+      <div>
+        <img src={item.splash} />
+        <p className="legend">{item.displayName}</p>
+      </div>
+    );
+  });
   if (isLoading) {
     return <Loading />;
   } else {
     return (
       <div className="container">
-        <div>gamemode 1</div>
+        <div className="maps box">
+          <Carousel>{maps}</Carousel>
+        </div>
       </div>
     );
   }

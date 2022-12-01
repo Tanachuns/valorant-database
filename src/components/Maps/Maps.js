@@ -29,7 +29,7 @@ const Maps = () => {
   const maps = mapList.map((item, index) => {
     return (
       <div>
-        <img src={item.splash} />
+        <img src={item.splash} alt={item.displayName} />
         <p className="legend">{item.displayName}</p>
       </div>
     );

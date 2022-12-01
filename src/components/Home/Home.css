@@ -14,13 +14,30 @@
 }
 
 .menu-box{
-    background-color: aqua;
-    border: 1px solid wheat;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 1em;
+    
 }
+.menu-box:hover a div{
+    
+}
+
+.menu-box:hover{
+    text-decoration: none;
+    color: white;
+    border: 3px solid white;
+    padding: 1em;
+    background: #ff4655;
+}
+
+
 
 #gamemodes-btn{
     grid-row: 1 / span 1;
     grid-column: 1 / span 2;
+    
 }
 
 #maps-btn {

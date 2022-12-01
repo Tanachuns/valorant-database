@@ -5,16 +5,16 @@ const Menu = () => {
   return (
     <div className="home-menu box">
       <Link id="gamemodes-btn" className="menu-box" to="/gamemodes">
-        <div>GameModes</div>
+        GameModes
       </Link>
       <Link className="menu-box" to="/agent">
-        <div>Agents</div>
+        Agents
       </Link>
       <Link className="menu-box" to="/weapons">
-        <div>Weapons</div>
+        Weapons
       </Link>
       <Link id="maps-btn" className="menu-box" to="/maps">
-        <div>Maps</div>
+        Maps
       </Link>
     </div>
   );

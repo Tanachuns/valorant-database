@@ -72,5 +72,6 @@ footer>div>a:hover {
   .container {
     display: flexbox;
     flex-direction: column;
+    
   }
 }

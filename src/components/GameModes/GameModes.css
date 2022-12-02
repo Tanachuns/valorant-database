@@ -1,0 +1,33 @@
+.gamemode-item{
+    text-align: center;
+    font-size: 12px;
+    height: 40%;
+    width: 100%;
+}
+
+.gamemode-item img{
+    height: 40%;
+}
+
+.gamemode-list{
+    display: flex;
+    margin: auto;
+    overflow: scroll;
+    width: 100%;
+    max-height: 100%;
+}
+
+.gamemode{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+@media (max-width: 870px) {
+.gamemode-list {
+        flex-direction: column;
+        width: 60%;
+    }
+    .gamemode-item{
+        width: 80%;
+    }
+}

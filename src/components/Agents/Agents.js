@@ -4,6 +4,7 @@ import "./Agent.css";
 import AgentDetail from "./AgentDetail";
 import AgentButton from "./AgentButton";
 import Loading from "../Loading/Loading";
+/* eslint-disable react-hooks/exhaustive-deps */
 
 const Agents = (props) => {
   const [agent, setAgent] = React.useState({});
@@ -11,10 +12,10 @@ const Agents = (props) => {
   const [isLoading, setIsLoading] = React.useState(true);
 
   React.useEffect(() => {
+    props.setPage(2);
     axios
       .get("https://valorant-api.com/v1/agents?isPlayableCharacter=true")
       .then((response) => {
-        console.log("get");
         setAgent(response.data.data[0]);
         setAgentList(response.data.data);
       })
@@ -32,6 +33,7 @@ const Agents = (props) => {
       <AgentButton index={index} key={index} agent={item} setAgent={setAgent} />
     );
   });
+
   if (isLoading) {
     return <Loading />;
   } else {

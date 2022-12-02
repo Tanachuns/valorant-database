@@ -76,7 +76,5 @@ footer>div>a:hover {
 @media (max-width: 600px) {
   .container {
     display: flexbox;
-    flex-direction: column;
-    
   }
 }

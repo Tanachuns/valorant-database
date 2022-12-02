@@ -4,16 +4,17 @@ import Loading from "../Loading/Loading";
 import "./Maps.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+/* eslint-disable react-hooks/exhaustive-deps */
 
 const Maps = (props) => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [mapList, setMapList] = React.useState([]);
 
   React.useEffect(() => {
+    props.setPage(4);
     axios
       .get("https://valorant-api.com/v1/maps")
       .then((response) => {
-        console.log(response.data.data);
         setMapList(response.data.data);
       })
       .then(() => {
@@ -34,7 +35,6 @@ const Maps = (props) => {
       </div>
     );
   });
-  props.setPage(4);
 
   if (isLoading) {
     return <Loading />;

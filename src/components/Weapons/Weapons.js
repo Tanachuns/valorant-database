@@ -6,11 +6,15 @@ import WeaponBox from "./WeaponBox";
 
 import "./Weapons.css";
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 const Weapons = (props) => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [weaponList, setWeaponList] = React.useState([]);
   const [armorsList, setArmors] = React.useState([]);
   React.useEffect(() => {
+    props.setPage(3);
+
     axios
       .get("https://valorant-api.com/v1/gear")
       .then((response) => {
@@ -22,7 +26,6 @@ const Weapons = (props) => {
     axios
       .get("https://valorant-api.com/v1/weapons")
       .then((response) => {
-        console.log(response);
         response.data.data.pop();
         setWeaponList(response.data.data);
       })
@@ -83,7 +86,6 @@ const Weapons = (props) => {
   const armors = armorsList.map((item, index) => {
     return <WeaponBox key={index} item={item} />;
   });
-  props.setPage(3);
 
   if (isLoading) {
     return <Loading />;

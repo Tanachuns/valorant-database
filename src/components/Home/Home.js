@@ -2,15 +2,15 @@ import React from "react";
 import "./Home.css";
 import Menu from "./Menu";
 import Loading from "../Loading/Loading";
-
+/* eslint-disable react-hooks/exhaustive-deps */
 const Home = (props) => {
   const [isLoading, setIsLoading] = React.useState(true);
   React.useEffect(() => {
+    props.setPage(0);
     setTimeout(() => {
       setIsLoading(false);
     }, 2500);
   }, []);
-  props.setPage(0);
 
   if (isLoading) {
     return <Loading />;

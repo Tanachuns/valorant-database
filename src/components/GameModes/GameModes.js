@@ -2,15 +2,17 @@ import React from "react";
 import axios from "axios";
 import Loading from "../Loading/Loading";
 import "./GameModes.css";
+/* eslint-disable react-hooks/exhaustive-deps */
 
 const GameModes = (props) => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [gameModeList, setGameModeList] = React.useState([]);
   React.useEffect(() => {
+    props.setPage(1);
+
     axios
       .get("https://valorant-api.com/v1/gamemodes")
       .then((response) => {
-        console.log(response.data.data);
         setGameModeList(response.data.data);
       })
       .then(
@@ -33,7 +35,6 @@ const GameModes = (props) => {
         </div>
       );
     });
-  props.setPage(1);
 
   if (isLoading) {
     return <Loading />;

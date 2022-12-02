@@ -46,7 +46,7 @@ function App() {
             Valorant
           </h1>
         </Link>
-        <p>/{nav}</p>
+        <p> /{nav}</p>
       </header>
       <main>
         <Routes>
@@ -60,14 +60,7 @@ function App() {
       </main>
       <footer>
         <div>
-          <Link
-            onClick={() => {
-              setPage(0);
-            }}
-            to="/home"
-          >
-            Home
-          </Link>
+          <Link to="/home">Home</Link>
           <Link to="/gamemodes">GameModes</Link>
           <Link to="/agent">Agents</Link>
           <Link to="/weapons">Weapons</Link>

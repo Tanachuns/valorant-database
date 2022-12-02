@@ -38,8 +38,9 @@ const Home = (props) => {
       <div className="container home">
         <div className="home-img box">
           <div>
-            <p>Hot Bundle</p>
+            <h2>Hot Bundle</h2>
             <img src={bundle.displayIcon} alt={bundle.displayName} />
+            <p>{bundle.displayName}</p>
           </div>
         </div>
         <Menu />

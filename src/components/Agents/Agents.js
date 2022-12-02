@@ -14,7 +14,7 @@ const Agents = (props) => {
   React.useEffect(() => {
     props.setPage(2);
     axios
-      .get("https://valorant-api.com/v1/agents?isPlayableCharacter=true")
+      .get(`https://valorant-api.com/v1/agents?isPlayableCharacter=true`)
       .then((response) => {
         setAgent(response.data.data[0]);
         setAgentList(response.data.data);

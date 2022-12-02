@@ -6,7 +6,7 @@ import WeaponBox from "./WeaponBox";
 
 import "./Weapons.css";
 
-const Weapons = () => {
+const Weapons = (props) => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [weaponList, setWeaponList] = React.useState([]);
   const [armorsList, setArmors] = React.useState([]);
@@ -83,6 +83,7 @@ const Weapons = () => {
   const armors = armorsList.map((item, index) => {
     return <WeaponBox key={index} item={item} />;
   });
+  props.setPage(3);
 
   if (isLoading) {
     return <Loading />;

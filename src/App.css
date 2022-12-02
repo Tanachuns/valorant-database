@@ -15,15 +15,20 @@ header{
   align-items: center;
   flex-direction: row;
 }
-header *{
+
+
+header a{
   text-decoration: none;
   color: #FFF;
 }
-header *:hover {
+header a:hover {
   color: #FFF;
   color: #ff4655;
 }
-
+ header p {
+  margin: auto 1em;
+  color: #05dc96;
+ }
 
 main{
   height: 85%;

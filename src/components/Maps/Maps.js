@@ -5,7 +5,7 @@ import "./Maps.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
-const Maps = () => {
+const Maps = (props) => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [mapList, setMapList] = React.useState([]);
 
@@ -34,6 +34,8 @@ const Maps = () => {
       </div>
     );
   });
+  props.setPage(4);
+
   if (isLoading) {
     return <Loading />;
   } else {

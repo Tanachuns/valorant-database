@@ -10,6 +10,29 @@ import Maps from "./components/Maps/Maps";
 import React from "react";
 
 function App() {
+  const [page, setPage] = React.useState(0);
+  let nav = "";
+  switch (page) {
+    case 0:
+      nav = "Home";
+      break;
+    case 1:
+      nav = "Game Modes";
+      break;
+    case 2:
+      nav = "Agents";
+      break;
+    case 3:
+      nav = "Weapons";
+      break;
+    case 4:
+      nav = "Maps";
+      break;
+    default:
+      nav = "Home";
+      break;
+  }
+
   return (
     <div className="App">
       <header>
@@ -23,20 +46,28 @@ function App() {
             Valorant
           </h1>
         </Link>
+        <p>/{nav}</p>
       </header>
       <main>
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/gamemodes" element={<GameModes />} />
-          <Route path="/agent" element={<Agents />} />
-          <Route path="/weapons" element={<Weapons />} />
-          <Route path="/maps" element={<Maps />} />
+          <Route path="/home" element={<Home setPage={setPage} />} />
+          <Route path="/gamemodes" element={<GameModes setPage={setPage} />} />
+          <Route path="/agent" element={<Agents setPage={setPage} />} />
+          <Route path="/weapons" element={<Weapons setPage={setPage} />} />
+          <Route path="/maps" element={<Maps setPage={setPage} />} />
         </Routes>
       </main>
       <footer>
         <div>
-          <Link to="/home">Home</Link>
+          <Link
+            onClick={() => {
+              setPage(0);
+            }}
+            to="/home"
+          >
+            Home
+          </Link>
           <Link to="/gamemodes">GameModes</Link>
           <Link to="/agent">Agents</Link>
           <Link to="/weapons">Weapons</Link>

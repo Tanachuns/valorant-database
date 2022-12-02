@@ -10,6 +10,7 @@ const Home = (props) => {
       setIsLoading(false);
     }, 2500);
   }, []);
+  props.setPage(0);
 
   if (isLoading) {
     return <Loading />;

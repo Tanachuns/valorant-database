@@ -3,7 +3,7 @@ import axios from "axios";
 import Loading from "../Loading/Loading";
 import "./GameModes.css";
 
-const GameModes = () => {
+const GameModes = (props) => {
   const [isLoading, setIsLoading] = React.useState(true);
   const [gameModeList, setGameModeList] = React.useState([]);
   React.useEffect(() => {
@@ -20,8 +20,6 @@ const GameModes = () => {
       );
   }, []);
 
-  console.log(gameModeList);
-
   const gameModes = gameModeList
     .filter((item) => {
       return item.displayIcon != null;
@@ -35,6 +33,7 @@ const GameModes = () => {
         </div>
       );
     });
+  props.setPage(1);
 
   if (isLoading) {
     return <Loading />;

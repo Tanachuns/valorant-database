@@ -1,87 +1,116 @@
 # valorant-database
 
-## Project Overview
+![Screen Shot](https://github.com/Tanachuns/valorant-database/blob/main/screenshot.gif?raw=true)
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+Valorant Database Website
 
 ## Project Links
 
-- [github repo]()
-- [deployment]()
+- [github repo](https://github.com/Tanachuns/valorant-database)
+
+- [deployment](https://tanalorant.netlify.app/home)
 
 ## Wireframes
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
 
-- [wireframes]()
-- [react architecture]()
+Home.js
+![Home.js](https://github.com/Tanachuns/valorant-database/blob/main/Proposal/App.png?raw=true)
+Menu.js
+![Menu.js](https://github.com/Tanachuns/valorant-database/blob/main/Proposal/Menu.png?raw=true)
+GameModes.js
+![GameModes.js](https://github.com/Tanachuns/valorant-database/blob/main/Proposal/GameModes.png?raw=true)
+Weapons.js
+![Weapons.js](https://github.com/Tanachuns/valorant-database/blob/main/Proposal/Weapons.png?raw=true)
+Maps.js
+![Maps.js](https://github.com/Tanachuns/valorant-database/blob/main/Proposal/Maps.png?raw=true)
+Agent.js
+![Agent.js](https://github.com/Tanachuns/valorant-database/blob/main/Proposal/Agents.png?raw=true)
 
-Define the the React components and the architectural design of your app.
+**React Architecture**
 
-### MVP/PostMVP - 5min
+> Define the the React components and the architectural design of your
+> app.
 
-The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
+     App.js
+    	|- Home.js
+        	|- Menu
+        |- GameModes.js
+        |- Agent.js
+    	    |- AgentButton.js
+    	    |- AgentDetail.js
+    		    |- AgentAbility.js
+        |- Weapons.js
+    	    |- WeaponList.js
+    	    |- WeaponBox.js
+        |- Maps.js
+        |- Loading.js
 
-#### MVP EXAMPLE
 
-- Find and use external api
-- Render data on page
-- Allow user to interact with the page
+### MVP/PostMVP
 
-#### PostMVP EXAMPLE
+> The functionality will then be divided into two separate lists: MPV
+> and PostMVP. Carefully decided what is placed into your MVP as the
+> client will expect this functionality to be implemented upon project
+> completion.
 
-- Add localStorage or firebase for storage
+#### MVP
+
+- [x] User can visit website(Home page).
+- [x] User can go to GameModes page with React Router.
+- [x] User can go to Weapons page with React Router.
+- [x] User can go to Maps page with React Router.
+- [x] User can go to Agents page with React Router.
+
+#### PostMVP
+
+- [x] User see Loading Screen While API is Loading.
 
 ## Components
 
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
-
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
-
-| Component |                          Description                          |
-| --------- | :-----------------------------------------------------------: |
-| App       | This will make the initial data pull and include React Router |
-| Header    |          This will render the header include the nav          |
-| Footer    |          This will render the header include the nav          |
-
-## Time Frames
-
-Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
-
-| Component        | Priority | Estimated Time | Time Invetsted | Actual Time |
-| ---------------- | :------: | :------------: | :------------: | :---------: |
-| Adding Form      |    H     |      3hrs      |     3.5hrs     |   3.5hrs    |
-| Working with API |    H     |      3hrs      |     2.5hrs     |   2.5hrs    |
-| Total            |    H     |      6hrs      |      5hrs      |    5hrs     |
+| App | This Component has a Navbar, React Routes and Footer that has Link. |
+| Home | This Component has a Hot deal bundle image and a Menu. |
+| GameModes | This Component show Game Modes List with name and average duration. |
+| Agent | This Component has a List of Agent(Character) and show the detail. |
+| Weapons | This Component has Weapons boxes by type of it and show the price when mouse over it. |
+| Maps | This Component has a Maps List in Carousel |
+| Loading | This Component show while API is loading. |
 
 ## Additional Libraries
 
-Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc.
+> Use this section to list all supporting libraries and thier role in
+> the project such as Axios, ReactStrap, D3, etc.
 
 - React-Router-Dom
 - Axios
-
-css
-
-- http://www.menucool.com/tooltip/css-tooltip
+- [CSS-Tooltip](http://www.menucool.com/tooltip/css-tooltip)
+- [React-Responsive-Carousel](https://react-responsive-carousel.js.org/)
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description. Code snippet should not be greater than 10 lines of code.
+> Use this section to include a brief code snippet of functionality that
+> you are proud of an a brief description. Code snippet should not be
+> greater than 10 lines of code.
+
+**Loading Screen**
+Component.js
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
+const [isLoading, setIsLoading] =  React.useState(true);
+
+useEffect(()=>{
+	axios.get(url).then(//setState).then(()=>{
+	setTimeout(() => {
+			setIsLoading(false);
+		}, 2000);
+	})
+},[]}
+
+if (isLoading) {
+	return  <Loading  />;
+} else {
+	return <Component />;
 }
 ```
-
-## Issues and Resolutions
-
-Use this section to list of all major issues encountered and their resolution.
-
-#### SAMPLE.....
-
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier  
-**RESOLUTION**: Missing comma after first object in sources {} object

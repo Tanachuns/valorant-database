@@ -59,13 +59,13 @@ Agent.js
 
 ## Components
 
-| App | This Component has a Navbar, React Routes and Footer that has Link. |
-| Home | This Component has a Hot deal bundle image and a Menu. |
-| GameModes | This Component show Game Modes List with name and average duration. |
-| Agent | This Component has a List of Agent(Character) and show the detail. |
-| Weapons | This Component has Weapons boxes by type of it and show the price when mouse over it. |
-| Maps | This Component has a Maps List in Carousel |
-| Loading | This Component show while API is loading. |
+    | App | This Component has a Navbar, React Routes and Footer that has Link. |
+    | Home | This Component has a Hot deal bundle image and a Menu. |
+    | GameModes | This Component show Game Modes List with name and average duration. |
+    | Agent | This Component has a List of Agent(Character) and show the detail. |
+    | Weapons | This Component has Weapons boxes by type of it and show the price when mouse over it. |
+    | Maps | This Component has a Maps List in Carousel |
+    | Loading | This Component show while API is loading. |
 
 ## Additional Libraries
 

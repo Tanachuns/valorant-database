@@ -14,8 +14,6 @@ Valorant Database Website
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
-
 Home.js
 ![Home.js](https://github.com/Tanachuns/valorant-database/blob/main/Proposal/App.png?raw=true)
 Menu.js
@@ -31,9 +29,6 @@ Agent.js
 
 **React Architecture**
 
-> Define the the React components and the architectural design of your
-> app.
-
      App.js
     	|- Home.js
         	|- Menu
@@ -48,13 +43,7 @@ Agent.js
         |- Maps.js
         |- Loading.js
 
-
 ### MVP/PostMVP
-
-> The functionality will then be divided into two separate lists: MPV
-> and PostMVP. Carefully decided what is placed into your MVP as the
-> client will expect this functionality to be implemented upon project
-> completion.
 
 #### MVP
 
@@ -80,19 +69,12 @@ Agent.js
 
 ## Additional Libraries
 
-> Use this section to list all supporting libraries and thier role in
-> the project such as Axios, ReactStrap, D3, etc.
-
 - React-Router-Dom
 - Axios
 - [CSS-Tooltip](http://www.menucool.com/tooltip/css-tooltip)
 - [React-Responsive-Carousel](https://react-responsive-carousel.js.org/)
 
 ## Code Snippet
-
-> Use this section to include a brief code snippet of functionality that
-> you are proud of an a brief description. Code snippet should not be
-> greater than 10 lines of code.
 
 **Loading Screen**
 Component.js

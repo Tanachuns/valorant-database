@@ -1,7 +1,7 @@
 .gamemode-item{
     text-align: center;
     font-size: 12px;
-    height: 40%;
+    max-height: 40%;
     width: 100%;
 }
 

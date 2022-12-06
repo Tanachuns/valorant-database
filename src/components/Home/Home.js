@@ -13,7 +13,6 @@ const Home = (props) => {
     axios
       .get(`https://valorant-api.com/v1/bundles`)
       .then((response) => {
-        console.log(response.data.data);
         setBundleList(response.data.data);
       })
       .then(() => {
@@ -32,7 +31,6 @@ const Home = (props) => {
     const randImg = () => {
       return Math.floor(Math.random() * bundleList.length);
     };
-    console.log(randImg());
     const bundle = bundleList[randImg()];
     return (
       <div className="container home">

@@ -27,18 +27,23 @@
 .menu-box{
     text-decoration: none;
     color: white;
+    background-color: #0f1923; 
     border: 1px solid white;
     padding: 1em;
+    background-position: 100% 0;
     
 }
 
 
 .menu-box:hover{
     text-decoration: none;
-    color: white;
+    color: #0f1923;
     border: 3px solid white;
     padding: 1em;
     background: #ff4655;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to left, #0f1923 50%,#ff4655 50%);
+    transition: background-position .4s;
 }
 
 
@@ -67,3 +72,4 @@
 
     
 }
+

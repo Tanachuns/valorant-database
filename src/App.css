@@ -17,12 +17,15 @@ header{
 }
 
 
-header a{
+a{
   text-decoration: none;
+  color: #0f1923;
+}
+
+header a {
   color: #FFF;
 }
 header a:hover {
-  color: #FFF;
   color: #ff4655;
 }
  header p {

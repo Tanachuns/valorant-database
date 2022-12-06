@@ -56,7 +56,6 @@ function App() {
           <Route path="/agent" element={<Agents setPage={setPage} />} />
           <Route path="/weapons" element={<Weapons setPage={setPage} />} />
           <Route path="/maps" element={<Maps setPage={setPage} />} />
-          <Route path="/*" element={<Maps setPage={setPage} />} />
         </Routes>
       </main>
       <footer>

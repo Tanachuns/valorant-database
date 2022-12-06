@@ -5,8 +5,15 @@
     width: 100%;
 }
 
+
 .gamemode-item img{
     height: 40%;
+    transition: height .5s;
+        
+}
+
+.gamemode-item:hover img {
+    height: 60%;
 }
 
 .gamemode-list{

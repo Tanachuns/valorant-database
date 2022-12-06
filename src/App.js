@@ -50,6 +50,7 @@ function App() {
       </header>
       <main>
         <Routes>
+          <Route path="*" element={<Maps setPage={setPage} />} />
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home setPage={setPage} />} />
           <Route path="/gamemodes" element={<GameModes setPage={setPage} />} />

@@ -10,7 +10,7 @@ Valorant Database Website
 
 - [github repo](https://github.com/Tanachuns/valorant-database)
 
-- [deployment](https://tanalorant.netlify.app/home)
+- [deployment](https://tanalorant.netlify.app)
 
 ## Wireframes
 

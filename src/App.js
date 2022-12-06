@@ -7,6 +7,7 @@ import GameModes from "./components/GameModes/GameModes";
 import Agents from "./components/Agents/Agents";
 import Weapons from "./components/Weapons/Weapons";
 import Maps from "./components/Maps/Maps";
+import PageNotFound from "./components/PageNotFound/PageNotFound";
 import React from "react";
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
           <Route path="/agent" element={<Agents setPage={setPage} />} />
           <Route path="/weapons" element={<Weapons setPage={setPage} />} />
           <Route path="/maps" element={<Maps setPage={setPage} />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </main>
       <footer>
